@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394101",
+  "transformer_id": "TXF-004-YABA-ShortCircuit",
+  "fault_code": 3,
+  "fault_name": "Short_Circuit",
+  "severity": "CRITICAL",
+  "confidence_pct": 98.77,
+  "class_probabilities": {
+    "Normal": 0.21,
+    "Overheating": 0.22,
+    "Low_Oil_Level": 0.19,
+    "Short_Circuit": 98.77,
+    "Open_Circuit": 0.22,
+    "Over_Voltage": 0.13,
+    "Over_Current": 0.28
+  },
+  "threshold_violations": [
+    {
+      "param": "temp_winding_C",
+      "value": 145,
+      "level": "CRITICAL",
+      "threshold": 110
+    },
+    {
+      "param": "temp_oil_C",
+      "value": 95,
+      "level": "CRITICAL",
+      "threshold": 95
+    },
+    {
+      "param": "current_avg_A",
+      "value": 2110.0,
+      "level": "CRITICAL",
+      "threshold": 334
+    }
+  ],
+  "recommended_actions": [
+    "URGENT: Trip and isolate transformer from service immediately.",
+    "Do NOT re-energise until fault is cleared.",
+    "Notify utility control room and protection engineers.",
+    "Perform insulation resistance (Megger) and winding resistance tests.",
+    "Schedule emergency repair or transformer replacement."
+  ],
+  "computed_features": {
+    "oil_level_pct": 86,
+    "temp_oil_C": 95,
+    "temp_winding_C": 145,
+    "voltage_A_V": 110,
+    "voltage_B_V": 108,
+    "voltage_C_V": 109,
+    "current_A_A": 2100,
+    "current_B_A": 2150,
+    "current_C_A": 2080,
+    "voltage_avg_V": 109.0,
+    "current_avg_A": 2110.0,
+    "voltage_unbal_pct": 0.917,
+    "current_unbal_pct": 1.896,
+    "load_pct": 344.96,
+    "delta_temp_C": 50,
+    "power_factor": 0.6,
+    "resistance_pu": 0.08
+  }
+}

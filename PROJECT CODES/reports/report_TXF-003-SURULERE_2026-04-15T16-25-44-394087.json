@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394087",
+  "transformer_id": "TXF-003-SURULERE",
+  "fault_code": 2,
+  "fault_name": "Low_Oil_Level",
+  "severity": "HIGH",
+  "confidence_pct": 99.97,
+  "class_probabilities": {
+    "Normal": 0.0,
+    "Overheating": 0.0,
+    "Low_Oil_Level": 99.97,
+    "Short_Circuit": 0.01,
+    "Open_Circuit": 0.01,
+    "Over_Voltage": 0.01,
+    "Over_Current": 0.01
+  },
+  "threshold_violations": [
+    {
+      "param": "oil_level_pct",
+      "value": 44,
+      "level": "CRITICAL",
+      "threshold": 55
+    }
+  ],
+  "recommended_actions": [
+    "Inspect tank for visible oil leaks at gaskets, bushings and drain plugs.",
+    "Top up oil using approved insulating oil (e.g. Nynas Nytro 10X).",
+    "Perform dielectric strength (BDV) test on oil after topping up.",
+    "Dispatch field technician within 24 hours."
+  ],
+  "computed_features": {
+    "oil_level_pct": 44,
+    "temp_oil_C": 79,
+    "temp_winding_C": 91,
+    "voltage_A_V": 240,
+    "voltage_B_V": 240,
+    "voltage_C_V": 240,
+    "current_A_A": 192,
+    "current_B_A": 190,
+    "current_C_A": 191,
+    "voltage_avg_V": 240.0,
+    "current_avg_A": 191.0,
+    "voltage_unbal_pct": 0.0,
+    "current_unbal_pct": 0.524,
+    "load_pct": 68.76,
+    "delta_temp_C": 12,
+    "power_factor": 0.86,
+    "resistance_pu": 1.0
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394023",
+  "transformer_id": "TXF-001-IKEJA",
+  "fault_code": 0,
+  "fault_name": "Normal",
+  "severity": "INFO",
+  "confidence_pct": 99.88,
+  "class_probabilities": {
+    "Normal": 99.88,
+    "Overheating": 0.04,
+    "Low_Oil_Level": 0.01,
+    "Short_Circuit": 0.01,
+    "Open_Circuit": 0.01,
+    "Over_Voltage": 0.04,
+    "Over_Current": 0.02
+  },
+  "threshold_violations": [],
+  "recommended_actions": [
+    "Continue normal monitoring.",
+    "Schedule next preventive maintenance per standard plan."
+  ],
+  "computed_features": {
+    "oil_level_pct": 87,
+    "temp_oil_C": 56,
+    "temp_winding_C": 67,
+    "voltage_A_V": 240,
+    "voltage_B_V": 240,
+    "voltage_C_V": 240,
+    "current_A_A": 185,
+    "current_B_A": 182,
+    "current_C_A": 183,
+    "voltage_avg_V": 240.0,
+    "current_avg_A": 183.33,
+    "voltage_unbal_pct": 0.0,
+    "current_unbal_pct": 0.909,
+    "load_pct": 66.0,
+    "delta_temp_C": 11,
+    "power_factor": 0.89,
+    "resistance_pu": 1.01
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394067",
+  "transformer_id": "TXF-002-OSHODI",
+  "fault_code": 1,
+  "fault_name": "Overheating",
+  "severity": "CRITICAL",
+  "confidence_pct": 99.71,
+  "class_probabilities": {
+    "Normal": 0.0,
+    "Overheating": 99.71,
+    "Low_Oil_Level": 0.01,
+    "Short_Circuit": 0.17,
+    "Open_Circuit": 0.04,
+    "Over_Voltage": 0.02,
+    "Over_Current": 0.05
+  },
+  "threshold_violations": [
+    {
+      "param": "temp_winding_C",
+      "value": 138,
+      "level": "CRITICAL",
+      "threshold": 110
+    },
+    {
+      "param": "temp_oil_C",
+      "value": 106,
+      "level": "CRITICAL",
+      "threshold": 95
+    },
+    {
+      "param": "current_avg_A",
+      "value": 351.0,
+      "level": "CRITICAL",
+      "threshold": 334
+    }
+  ],
+  "recommended_actions": [
+    "URGENT: Reduce load \u2014 shed non-critical feeders immediately.",
+    "Inspect and clean oil cooling radiators / fins.",
+    "Check ventilation around transformer enclosure.",
+    "Dispatch field technician within 2 hours.",
+    "Prepare spare transformer for possible swap-out."
+  ],
+  "computed_features": {
+    "oil_level_pct": 81,
+    "temp_oil_C": 106,
+    "temp_winding_C": 138,
+    "voltage_A_V": 239,
+    "voltage_B_V": 238,
+    "voltage_C_V": 239,
+    "current_A_A": 350,
+    "current_B_A": 355,
+    "current_C_A": 348,
+    "voltage_avg_V": 238.67,
+    "current_avg_A": 351.0,
+    "voltage_unbal_pct": 0.279,
+    "current_unbal_pct": 1.14,
+    "load_pct": 125.66,
+    "delta_temp_C": 32,
+    "power_factor": 0.86,
+    "resistance_pu": 0.98
+  }
+}

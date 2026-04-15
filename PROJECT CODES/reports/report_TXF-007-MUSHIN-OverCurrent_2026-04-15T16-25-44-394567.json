@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394567",
+  "transformer_id": "TXF-007-MUSHIN-OverCurrent",
+  "fault_code": 6,
+  "fault_name": "Over_Current",
+  "severity": "CRITICAL",
+  "confidence_pct": 99.91,
+  "class_probabilities": {
+    "Normal": 0.0,
+    "Overheating": 0.0,
+    "Low_Oil_Level": 0.01,
+    "Short_Circuit": 0.05,
+    "Open_Circuit": 0.01,
+    "Over_Voltage": 0.02,
+    "Over_Current": 99.91
+  },
+  "threshold_violations": [
+    {
+      "param": "temp_winding_C",
+      "value": 118,
+      "level": "CRITICAL",
+      "threshold": 110
+    },
+    {
+      "param": "temp_oil_C",
+      "value": 88,
+      "level": "WARNING",
+      "threshold": 80
+    },
+    {
+      "param": "current_avg_A",
+      "value": 477.67,
+      "level": "CRITICAL",
+      "threshold": 334
+    }
+  ],
+  "recommended_actions": [
+    "Identify and disconnect overloaded feeders or downstream faults.",
+    "Check for downstream short circuits causing sustained over-current.",
+    "Verify overcurrent relay / fuse ratings and operation.",
+    "Reduce connected load below 80 % rated kVA.",
+    "Dispatch field technician if current does not normalise within 15 minutes."
+  ],
+  "computed_features": {
+    "oil_level_pct": 86,
+    "temp_oil_C": 88,
+    "temp_winding_C": 118,
+    "voltage_A_V": 228,
+    "voltage_B_V": 227,
+    "voltage_C_V": 228,
+    "current_A_A": 480,
+    "current_B_A": 475,
+    "current_C_A": 478,
+    "voltage_avg_V": 227.67,
+    "current_avg_A": 477.67,
+    "voltage_unbal_pct": 0.293,
+    "current_unbal_pct": 0.558,
+    "load_pct": 163.12,
+    "delta_temp_C": 30,
+    "power_factor": 0.82,
+    "resistance_pu": 0.97
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394403",
+  "transformer_id": "TXF-005-APAPA-OpenCircuit",
+  "fault_code": 4,
+  "fault_name": "Open_Circuit",
+  "severity": "HIGH",
+  "confidence_pct": 99.97,
+  "class_probabilities": {
+    "Normal": 0.0,
+    "Overheating": 0.0,
+    "Low_Oil_Level": 0.0,
+    "Short_Circuit": 0.0,
+    "Open_Circuit": 99.97,
+    "Over_Voltage": 0.02,
+    "Over_Current": 0.01
+  },
+  "threshold_violations": [
+    {
+      "param": "voltage_avg_V",
+      "value": 258.67,
+      "level": "WARNING",
+      "threshold": 252
+    },
+    {
+      "param": "voltage_unbal_pct",
+      "value": 14.046,
+      "level": "CRITICAL",
+      "threshold": 5.0
+    },
+    {
+      "param": "current_unbal_pct",
+      "value": 98.814,
+      "level": "CRITICAL",
+      "threshold": 20
+    },
+    {
+      "param": "resistance_pu",
+      "value": 14.5,
+      "level": "CRITICAL",
+      "threshold": 10.0
+    }
+  ],
+  "recommended_actions": [
+    "Check HV and LV fuses / circuit breakers on all three phases.",
+    "Inspect cable terminations and busbar connections for open joints.",
+    "Measure per-phase continuity with clamp meter before re-energising.",
+    "Dispatch field technician within 4 hours."
+  ],
+  "computed_features": {
+    "oil_level_pct": 88,
+    "temp_oil_C": 60,
+    "temp_winding_C": 74,
+    "voltage_A_V": 295,
+    "voltage_B_V": 241,
+    "voltage_C_V": 240,
+    "current_A_A": 1.5,
+    "current_B_A": 190,
+    "current_C_A": 188,
+    "voltage_avg_V": 258.67,
+    "current_avg_A": 126.5,
+    "voltage_unbal_pct": 14.046,
+    "current_unbal_pct": 98.814,
+    "load_pct": 45.68,
+    "delta_temp_C": 14,
+    "power_factor": 0.88,
+    "resistance_pu": 14.5
+  }
+}

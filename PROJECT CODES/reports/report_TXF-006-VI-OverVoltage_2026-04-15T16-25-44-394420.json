@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-04-15T16:25:44.394420",
+  "transformer_id": "TXF-006-VI-OverVoltage",
+  "fault_code": 5,
+  "fault_name": "Over_Voltage",
+  "severity": "HIGH",
+  "confidence_pct": 100.0,
+  "class_probabilities": {
+    "Normal": 0.0,
+    "Overheating": 0.0,
+    "Low_Oil_Level": 0.0,
+    "Short_Circuit": 0.0,
+    "Open_Circuit": 0.0,
+    "Over_Voltage": 100.0,
+    "Over_Current": 0.0
+  },
+  "threshold_violations": [
+    {
+      "param": "voltage_avg_V",
+      "value": 291.0,
+      "level": "CRITICAL",
+      "threshold": 264
+    }
+  ],
+  "recommended_actions": [
+    "Check HV supply voltage at incoming busbar and tap-changer position.",
+    "Adjust on-load/off-load tap-changer to lower output voltage.",
+    "Inspect voltage regulator / AVR if fitted.",
+    "Monitor for 30 minutes after adjustment; escalate if over-voltage persists."
+  ],
+  "computed_features": {
+    "oil_level_pct": 87,
+    "temp_oil_C": 65,
+    "temp_winding_C": 80,
+    "voltage_A_V": 292,
+    "voltage_B_V": 290,
+    "voltage_C_V": 291,
+    "current_A_A": 210,
+    "current_B_A": 212,
+    "current_C_A": 211,
+    "voltage_avg_V": 291.0,
+    "current_avg_A": 211.0,
+    "voltage_unbal_pct": 0.344,
+    "current_unbal_pct": 0.474,
+    "load_pct": 92.1,
+    "delta_temp_C": 15,
+    "power_factor": 0.83,
+    "resistance_pu": 1.0
+  }
+}
