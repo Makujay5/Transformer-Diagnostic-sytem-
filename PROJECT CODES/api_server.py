@@ -1,33 +1,3 @@
-"""
-=============================================================================
-  FAULT DIAGNOSTIC SYSTEM FOR DISTRIBUTION TRANSFORMER
-  api_server.py  —  Flask REST API Server
-=============================================================================
-  Authors : Maku James Oluwatosin (20201749)
-           & Eniyangbagbe Oluwaniyomi Enoch (20201740)
-
-  This is the web server that:
-    1. Loads the trained SVM model on startup
-    2. Accepts POST requests with sensor readings (from ESP32 or curl)
-    3. Returns a JSON fault diagnosis with severity + recommended actions
-    4. Sends an SMS alert via Termii when fault is CRITICAL or HIGH
-    5. Serves a simple status page at the root URL
-
-  HOW TO RUN LOCALLY:
-      python api_server.py
-  
-  HOW TO RUN ON RENDER (set as Start Command):
-      gunicorn api_server:app --bind 0.0.0.0:$PORT
-
-  TEST IT (copy any of these into Command Prompt):
-
-  -- Normal:
-  curl -X POST http://localhost:5000/diagnose -H "Content-Type: application/json" -d "{\"transformer_id\":\"TEST\",\"oil_level_pct\":87,\"temp_oil_C\":55,\"temp_winding_C\":65,\"voltage_A_V\":240,\"voltage_B_V\":240,\"voltage_C_V\":240,\"current_A_A\":185,\"current_B_A\":182,\"current_C_A\":183,\"power_factor\":0.89,\"resistance_pu\":1.0}"
-
-  -- Short Circuit:
-  curl -X POST http://localhost:5000/diagnose -H "Content-Type: application/json" -d "{\"transformer_id\":\"TEST\",\"oil_level_pct\":86,\"temp_oil_C\":95,\"temp_winding_C\":145,\"voltage_A_V\":110,\"voltage_B_V\":108,\"voltage_C_V\":109,\"current_A_A\":2100,\"current_B_A\":2150,\"current_C_A\":2080,\"power_factor\":0.60,\"resistance_pu\":0.08}"
-=============================================================================
-"""
 
 import os
 import datetime
@@ -61,7 +31,7 @@ print("=" * 60)
 # Leave TERMII_API_KEY as an empty string "" to disable SMS (no error will occur)
 
 TERMII_API_KEY = ""                  # paste your Termii API key here e.g. "TLtest123abc..."
-ENGINEER_PHONE = "+2348012345678"    # replace with real engineer phone number
+ENGINEER_PHONE = "+2347054026418"    # replace with real engineer phone number
 
 
 def send_sms_alert(report):
